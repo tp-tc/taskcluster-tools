@@ -139,7 +139,7 @@ export default React.createClass({
       let icon;
 
       if (/^public\//.test(artifact.name)) {
-        url = 'https://queue.taskcluster.net/v1/task/';
+        url = `https://queue.${process.env.BASE_DOMAIN}/v1/task/`;
         if (this.props.runId != null) {
           url += `${this.props.taskId}/runs/${this.props.runId}/artifacts/${artifact.name}`;
           // We could use queue.buildUrl as follows, but this creates URLs where artifact name

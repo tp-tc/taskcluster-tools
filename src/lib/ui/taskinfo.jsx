@@ -179,7 +179,7 @@ const TaskInfo = React.createClass({
               <td>Task Definition</td>
               <td>
                 <a
-                  href={`https://queue.taskcluster.net/v1/task/${status.taskId}`}
+                  href={`https://queue.${process.env.BASE_DOMAIN}/v1/task/${status.taskId}`}
                   target="_blank"
                   rel="noopener noreferrer">
                   {status.taskId} <i className="fa fa-external-link" />
